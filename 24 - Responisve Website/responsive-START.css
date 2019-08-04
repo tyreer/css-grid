@@ -12,3 +12,38 @@ img {
   max-width: 100%;
 }
 
+.wrapper {
+  display: grid;
+}
+
+.top,
+.features,
+.about,
+.gallery {
+  order: 2;
+}
+
+.menu {
+  order: 1;
+}
+
+@media (min-width: 700px) {
+  .menu {
+    order: 2;
+  }
+}
+
+#menu-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.hero {
+  height: 400px;
+  background: no-repeat url("./images/taco.jpg");
+  background-size: cover;
+  display: grid;
+  align-content: center;
+  padding: 40px;
+  color: white;
+}

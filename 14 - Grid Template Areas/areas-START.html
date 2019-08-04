@@ -29,6 +29,39 @@
     .container {
       display: grid;
       grid-gap: 20px;
+      grid-template-columns: 1fr 8fr 1fr;
+      grid-template-rows: auto auto 100px;
+      grid-template-areas: 
+      "content  content   content"
+      "side-1   side-1   side-2"
+      "footer   footer    footer"
+    }
+
+    .item1 {
+      grid-area: side-1;
+    }
+
+
+    .item2 {
+      grid-area: content;
+    }
+
+    .item3 {
+      grid-area: side-2;
+    }
+
+    .footer {
+      grid-area: footer;
+    }
+
+    @media(min-width: 500px) {
+
+      .container {
+        grid-template-areas: 
+        "side-1   content   side-2"
+        "side-1   content   side-2"
+        "footer   footer    footer"
+      }
     }
   </style>
 </body>
